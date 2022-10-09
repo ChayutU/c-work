@@ -6,13 +6,13 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 05:59:19 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/10 05:59:47 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/10 06:20:26 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
