@@ -6,7 +6,7 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:01:20 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/09 19:08:57 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/10 03:32:14 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ void	ft_print_num(char a, char b, char c)
 	ft_putchar(a);
 	ft_putchar(b);
 	ft_putchar(c);
+	if (a != '7' || b != '8' || c != '9')
+	{
+		ft_print_deli();
+	}
 }
 
 void	ft_print_comb(void)
@@ -37,20 +41,18 @@ void	ft_print_comb(void)
 	int	thr;
 
 	fir = '0';
-	sec = '1';
-	thr = '2';
-	ft_print_num(fir++, sec++, thr++);
 	while (fir <= '7')
 	{
+		sec = fir + 1;
 		while (sec <= '8')
 		{
+			thr = sec + 1;
 			while (thr <= '9')
 			{
-				ft_print_deli();
 				ft_print_num(fir, sec, thr++);
 			}
-			thr = ++sec + 1;
+			sec++;
 		}
-		sec = ++fir;
+		fir++;
 	}
 }

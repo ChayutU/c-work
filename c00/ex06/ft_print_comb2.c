@@ -6,7 +6,7 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:08:43 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/09 22:24:24 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/10 03:24:08 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,4 @@ void	ft_print_comb2(void)
 		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
 }
