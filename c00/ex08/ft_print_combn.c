@@ -6,7 +6,7 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 20:28:04 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/09 23:07:43 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/10 03:02:16 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_put_table(int *table, int n)
+void	ft_put_arr(int *arr, int n)
 {
 	int	i;
 
 	i = 0;
 	while (i < n)
 	{
-		ft_putchar(table[i++] + '0');
+		ft_putchar(arr[i++] + '0');
 	}
 }
 
@@ -34,37 +34,53 @@ void	ft_put_delimeter(void)
 	ft_putchar(' ');
 }
 
-void	ft_combn(int table[], int n, int i)
+void	ft_combn(int *arr, int n)
 {
-	if (i == 0)
-		table[i] = 0;
-	else
-		table[i] = table[i - 1] + 1;
-	while (table[i] <= 10 - n + i)
+	int	i;
+	int	l;
+
+	i = 1;
+	l = 1;
+	while (i < n)
 	{
-		if (i == n - 1)
+		if (arr[i - 1] >= arr[i])
+			l = 0;
+		i++;
+	}
+	if (l == 1)
+	{
+		ft_put_arr(arr, n);
+		if (arr[0] < 10 - n)
 		{
-			ft_put_table(table, n);
-			if (table[0] != 10 - n)
-			{
-				ft_put_delimeter();
-			}
+			ft_put_delimeter();
 		}
-		else
-		{
-			ft_combn(table, n, i + 1);
-		}
-		table[i] = table[i] + 1;
 	}
 }
 
 void	ft_print_combn(int n)
 {
-	int	table[10];
+	int	i;
+	int	arr[10];
 
-	if (n <= 0 || n >= 10)
+	i = 0;
+	while (i < n)
 	{
-		return ;
+		arr[i] = 0;
+		i++;
 	}
-	ft_combn(table, n, 0);
+	while (arr[0] <= 10 - n && (n > 0 && n < 10))
+	{
+		ft_combn(arr, n);
+		arr[n - 1] = arr[n - 1] + 1;
+		i = n - 1;
+		while (i > 0)
+		{
+			if (arr[i] > 9)
+			{
+				arr[i - 1] = arr[i - 1] + 1;
+				arr[i] = arr[i - 1];
+			}
+			i--;
+		}
+	}
 }
