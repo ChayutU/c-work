@@ -6,7 +6,7 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:08:43 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/09 19:30:01 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/09 22:24:24 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,20 @@ void	ft_print_comb2(void)
 {
 	int	i;
 	int	j;
+	int	first;
 
 	i = 0;
-	j = 1;
-	ft_print_nums(i++, j++);
+	first = 1;
 	while (i < 100)
 	{
 		j = i + 1;
 		while (j < 100)
 		{
-			ft_putchar(',');
-			ft_putchar(' ');
+			if (first-- < 1)
+			{
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
 			ft_print_nums(i, j);
 			j++;
 		}
@@ -57,6 +60,7 @@ void	ft_print_comb2(void)
 	}
 }
 
+int	main(void)
 {
 	ft_print_comb2();
 }
