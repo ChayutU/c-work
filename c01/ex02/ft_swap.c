@@ -6,13 +6,13 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 03:36:08 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/10 03:38:19 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/10 04:16:05 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int c;
+	int	c;
 
 	c = *a;
 	*a = *b;
