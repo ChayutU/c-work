@@ -6,7 +6,7 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:47:14 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/09 16:05:11 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/09 16:11:43 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,4 @@
 void ft_putchar(char c)
 {
     write(1, &c, 1);
-}
-
-int main()
-{
-    ft_putchar('a');
 }
