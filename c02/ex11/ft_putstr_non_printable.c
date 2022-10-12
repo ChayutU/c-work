@@ -6,11 +6,10 @@
 /*   By: chupatha <chupatha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:56:07 by chupatha          #+#    #+#             */
-/*   Updated: 2022/10/12 18:44:39 by chupatha         ###   ########.fr       */
+/*   Updated: 2022/10/12 23:43:52 by chupatha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
